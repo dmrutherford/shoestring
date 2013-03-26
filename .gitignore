@@ -161,3 +161,7 @@ pip-log.txt
 
 # Mac crap
 .DS_Store
+
+# Jekyll and Sass
+.sass-cache/
+_site/
