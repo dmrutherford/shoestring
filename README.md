@@ -32,9 +32,9 @@ Infrequently Asked Questions
 
     Probably not. Look, if that kind of thing is an issue for you, you're not really part of the target audience here. Try [Foundation](http://foundation.zurb.com)?
     
-*   **Will Shoestring play nice with [Compass](http://compass-style.org)?**
+*   **Will Shoestring play nice with Compass?**
 
-    Maybe? I keep meaning to take a proper look at Compass, but I haven't got around to it yet.
+    Maybe? I keep meaning to take a proper look at [Compass](http://compass-style.org), but I haven't got around to it yet.
 
 
 Credit Where It's Due
