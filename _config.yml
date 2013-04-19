@@ -1,0 +1,19 @@
+include: [.htaccess]
+exclude: [README.md]
+url:
+permalink: pretty
+pagination:
+title:
+author:
+description:
+language: en-GB
+ms-colour:
+social:
+    facebook:
+    google:
+    twitter:
+version:
+    css:
+    js:
+jquery:
+    version:
