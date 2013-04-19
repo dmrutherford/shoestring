@@ -1,0 +1,12 @@
+        <meta name="twitter:card" content="{% if page.social.twitter.type %}{{ page.social.twitter.type }}{% else %}summary{% endif %}" />
+        <meta name="twitter:site" content="{{ site.social.twitter }}" />
+        <meta name="twitter:creator" content="{% if page.social.twitter.creator %}@{{ page.social.twitter.creator }}{% else %}@{{ site.social.twitter }}{% endif %}" />
+        <meta name="twitter:url" content="{{ site.url }}{{ page.url }}" />
+        <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+        <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+        <meta name="twitter:image" content="{% if page.social.twitter.image %}{{ page.social.twitter.image }}{% else %}{{ site.url }}/apple-touch-icon.png }}{% endif %}" />{% if page.social.twitter.type == "photo" %}
+        <meta name="twitter:image:width" content="{{ page.social.twitter.image-width }}" />
+        <meta name="twitter:image:height" content="{{ page.social.twitter.image-height }}" />{% elsif page.social.twitter.type == "player" %}
+        <meta name="twitter:player" content="{{ page.social.twitter.player }}" />
+        <meta name="twitter:player:width" content="{{ page.social.twitter.player-width }}" />
+        <meta name="twitter:player:height" content="{{ page.social.twitter.player-height }}" />{% endif %}
