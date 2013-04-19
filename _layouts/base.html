@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="{{ site.language }}">
+
+    <head>
+    
+        <meta charset="utf-8" />
+        
+        <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.site-title }}</title>
+        
+            <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+        
+        <link rel="author" href="{% if page.author.google %}{{ page.author.google }}{% else %}{{ site.social.google }}{% endif %}" />
+        <link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml" title="{{ site.title }}" />
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <link rel="logo" type="image/svg" href="{{ site.url }}/logo.svg" />
+        <link rel="icon" href="{{ site.url }}/favicon.ico" />
+        <link rel="apple-touch-icon" href="{{ site.url }}/apple-touch-icon.png" />
+        <meta name="msapplication-TileImage" content="{{ site.url }}/ms-tile-img.png" />
+        <meta name="msapplication-TileColor" content="{{ site.ms-colour }}" />
+        
+        <link rel="stylesheet" href="{{ site.url }}/css/styles.{{ site.version.css }}.css" />
+
+{% include head/social.html %}
+
+{% include head/analytics.html %}
+    
+    </head>
+    
+    <body>
+    
+{{ content }}
+
+{% if site.jquery %}<script src="//ajax.googleapis.com/ajax/libs/jquery/{{ site.jquery.version ))/jquery.min.js"></script>{% endif %}
+<script src="{{ site.url }}/js/scripts.{{ site.version.js }}.js"></script>
+    
+    </body>
+
+</html>
