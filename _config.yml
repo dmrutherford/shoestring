@@ -3,6 +3,7 @@ exclude: [README.md]
 url:
 permalink: pretty
 pagination:
+future: false
 title:
 author:
 description:
