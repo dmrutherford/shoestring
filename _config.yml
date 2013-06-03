@@ -6,6 +6,7 @@ pagination:
 future: false
 title:
 author:
+email:
 description:
 language: en-GB
 ms-colour:
