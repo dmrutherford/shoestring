@@ -1,0 +1,61 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>{{ site.url }}/</loc>
+    </url>{% for page in site.html_pages %}{% if page.slug != "home" %}
+    <url>
+        <loc>{{ site.url }}{{ page.url }}</loc>
+    </url>{% endif %}{% endfor %}{% for post in site.posts %}
+    <url>
+        <loc>{{ site.url }}{{ post.url }}</loc>
+        <lastmod>{% if post.updated %}{{ post.updated | date_to_xmlschema }}{% else %}{{ post.date | date_to_xmlschema }}{% endif %}</lastmod>
+    </url>{% endfor %}
+</urlset>
+
+
+
+
+
+
+
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>http://dmrutherford.github.io/</loc>
+    <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
+    <changefreq>weekly</changefreq>
+		<priority>1.0</priority>
+  </url>
+  {% for page in site.posts %}
+  <url>
+    <loc>http://dmrutherford.github.io{{ page.url }}</loc>
+    {% if page.last_updated %}
+    <lastmod>{{ page.last_updated | date: "%Y-%m-%d" }}</lastmod>
+    {% elsif page.date %}
+    <lastmod>{{ page.date | date: "%Y-%m-%d" }}</lastmod>
+    {% else %}
+    <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
+    {% endif %}
+  </url>{% endfor %}
+  {% for page in site.html_pages %}{% if page.slug != 'frontpage' %}
+  <url>
+    <loc>http://dmrutherford.github.io{{ page.url }}</loc>
+    {% if page.last_updated %}
+    <lastmod>{{ page.last_updated | date: "%Y-%m-%d" }}</lastmod>
+    {% elsif page.date %}
+    <lastmod>{{ page.date | date: "%Y-%m-%d" }}</lastmod>
+    {% else %}
+    <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
+    {% endif %}
+  </url>
+  {% endif %}{% endfor %}
+{% include projects-sitemap.xml %}
+
+</urlset>
