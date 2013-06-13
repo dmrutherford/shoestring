@@ -165,3 +165,6 @@ pip-log.txt
 # Jekyll and Sass
 .sass-cache/
 _site/
+
+# Ignore generated CSS
+css/
