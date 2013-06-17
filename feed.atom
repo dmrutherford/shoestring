@@ -19,7 +19,8 @@ layout: nil
         <link type="text/html" rel="alternate" href="{{ site.url }}{{ post.url }}" />
         <id>{{ site.url }}{{ post.url }}</id>
         <author>
-            <name>{% if post.author %}{{ post.author }}</name>{% else %}{{ site.author }}</name>
+            <name>{% if post.author.name %}{{ post.author.name }}</name>{% if post.author.email %}
+            <email>{{ post.author.email }}</email>{% endif %}{% else %}{{ site.author }}</name>
             <email>{{ site.email }}</email>{% endif %}
         </author>{% if post.category %}
         <category term="{{ post.category }}" />{% endif %}

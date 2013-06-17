@@ -15,7 +15,7 @@ layout: nil
             <title>{{ post.title }}</title>
             <link>{{ site.url }}{{ post.url }}</link>
             <guid>{{ site.url }}{{ post.url }}</guid>
-            <author>{% if post.author %}{{ post.author }}{% else %}{{ site.author }}{% endif %}</author>{% if post.category %}
+            <author>{% if post.author.name %}{{ post.author.name }}{% else %}{{ site.author }}{% endif %}</author>{% if post.category %}
             <category>{{ post.category }}</category>{% endif %}
             <pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
             <description>
