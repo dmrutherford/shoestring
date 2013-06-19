@@ -1,21 +1,21 @@
 .screen-reader-text {
-	position:	absolute;
-	top:		-9999px;
-	left:		-9999px;
+    position:       absolute;
+    top:            -9999px;
+    left:           -9999px;
 }
 
 .group:after {
-	content:	'';
-	display:	table;
-	clear:		both;
+    content:        '';
+    display:	    table;
+    clear:          both;
 }
 
 [class*='icon-'] {
-	display:		inline-block;
+    display:        inline-block;
 }
 
 [data-icon]:before {
-	font-family:	$icons;
-	content:		attr(data-icon);
-	speak:			none;
+    font-family:    $icons;
+    content:        attr(data-icon);
+    speak:          none;
 }
