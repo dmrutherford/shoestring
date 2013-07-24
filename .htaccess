@@ -14,9 +14,12 @@ Options All -Indexes
 
 
 # Try for compressed versions of files
+# ... this probably needs to go beneath the cache-busting bit
+# ... probably it won't work at all
+# ... whatever.
 
 <IfModule mod_rewrite.c>
-    RewriteEngine 
+    RewriteEngine on
     RewriteCond %{HTTP:accept-encoding} gzip
     RewriteCond %{REQUEST_FILENAME} !^.+\.gz$
     RewriteCond %{REQUEST_FILENAME}.gz -f
