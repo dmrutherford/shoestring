@@ -1,6 +1,6 @@
         <meta name="twitter:card" content="{% if page.social.twitter.type %}{{ page.social.twitter.type }}{% else %}summary{% endif %}" />
-        <meta name="twitter:site" content="{{ site.social.twitter }}" />
-        <meta name="twitter:creator" content="{% if page.social.twitter.creator %}@{{ page.social.twitter.creator }}{% else %}@{{ site.social.twitter }}{% endif %}" />
+        <meta name="twitter:site" content="@{{ site.social.twitter }}" />
+        <meta name="twitter:creator" content="@{% if page.social.twitter.creator %}{{ page.social.twitter.creator }}{% else %}{{ site.social.twitter }}{% endif %}" />
         <meta name="twitter:url" content="{{ site.url }}{{ page.url }}" />
         <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
         <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
