@@ -10,6 +10,10 @@
     clear:          both;
 }
 
+.non-breaking {
+    white-space:    nowrap;
+}
+
 [class*='icon-'] {
     display:        inline-block;
 }
